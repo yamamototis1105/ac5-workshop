@@ -69,8 +69,8 @@ jobs:
           UID: ${{ inputs.user_id }}
           GID: ${{ inputs.group_id }}
         with:
-          subFolder: containers/my_container
-          imageName: ghcr.io/${{ steps.gh_repo.outputs.name_lowcase }}/my_container
-          imageTag: latest
+          subFolder: containers/lab
+          imageName: ghcr.io/${{ steps.gh_repo.outputs.name_lowcase }}/lab
+          imageTag: uid-${{ inputs.user_id }}
           platform: linux/arm64/v8,linux/amd64
           push: always
